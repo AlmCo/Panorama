@@ -1,0 +1,2 @@
+# Panorama
+Fast incident overview
