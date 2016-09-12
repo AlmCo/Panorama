@@ -57,58 +57,6 @@ class fromhostget():
     def __init__(self):
         self.hostname = str(os.popen('hostname').read().split()[0]) # Called by fromhostget().hostname
 
-    # Audio test (Sound and Record):
-    def soundtest(self):
-        played = 0
-        recorded = 0
-
-        # Play:
-        runonrun = 0 # do test sound also when running?
-        if runonrun == 1:
-            try: 
-                wf = wave.open(tempdir+"\soundplay.wav", 'rb')
-                p = pyaudio.PyAudio()
-                stream = p.open(format=p.get_format_from_width(wf.getsampwidth()), channels=wf.getnchannels(), rate=wf.getframerate(), output=True)
-                data = wf.readframes(1024)
-                while data != '':
-                    stream.write(data)
-                    data = wf.readframes(1024)
-
-                stream.stop_stream()
-                stream.close()
-
-                p.terminate()
-                played = 1
-            except: # If there is excption so there is no output
-                played = 0
-
-        # Record:
-        try: 
-            RECORD_SECONDS = 7
-            WAVE_OUTPUT_FILENAME = tempdir+"\soundrecord.wav"
-            audio = pyaudio.PyAudio()
-            
-            stream = audio.open(format=pyaudio.paInt16, channels=2, rate=44100, input=True, frames_per_buffer=1024)
-            frames = []
-            for i in range(0, int(44100 / 1024 * RECORD_SECONDS)):
-                frames.append(stream.read(1024))
-
-            # STOP Recording:
-            stream.stop_stream()
-            stream.close()
-            audio.terminate()
-            waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')            
-            waveFile.setnchannels(2)
-            waveFile.setsampwidth(audio.get_sample_size(pyaudio.paInt16))
-            waveFile.setframerate(44100)
-            waveFile.writeframes(b''.join(frames))
-            waveFile.close()
-            recorded = 1
-        except: # If there is excption so there is no input
-            recorded = 0
-
-        return recorded, played
-
     # Operating system:
     def os(self):
         try: # Extract the windows dist name
@@ -649,6 +597,58 @@ class fromhostget():
             return processes
         except:
             return processes
+
+    # Audio test (Sound and Record):
+    def soundtest(self):
+        played = 0
+        recorded = 0
+
+        # Play:
+        runonrun = 0 # do test sound also when running?
+        if runonrun == 1:
+            try: 
+                wf = wave.open(tempdir+"\soundplay.wav", 'rb')
+                p = pyaudio.PyAudio()
+                stream = p.open(format=p.get_format_from_width(wf.getsampwidth()), channels=wf.getnchannels(), rate=wf.getframerate(), output=True)
+                data = wf.readframes(1024)
+                while data != '':
+                    stream.write(data)
+                    data = wf.readframes(1024)
+
+                stream.stop_stream()
+                stream.close()
+
+                p.terminate()
+                played = 1
+            except: # If there is excption so there is no output
+                played = 0
+
+        # Record:
+        try: 
+            RECORD_SECONDS = 7
+            WAVE_OUTPUT_FILENAME = tempdir+"\soundrecord.wav"
+            audio = pyaudio.PyAudio()
+            
+            stream = audio.open(format=pyaudio.paInt16, channels=2, rate=44100, input=True, frames_per_buffer=1024)
+            frames = []
+            for i in range(0, int(44100 / 1024 * RECORD_SECONDS)):
+                frames.append(stream.read(1024))
+
+            # STOP Recording:
+            stream.stop_stream()
+            stream.close()
+            audio.terminate()
+            waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')            
+            waveFile.setnchannels(2)
+            waveFile.setsampwidth(audio.get_sample_size(pyaudio.paInt16))
+            waveFile.setframerate(44100)
+            waveFile.writeframes(b''.join(frames))
+            waveFile.close()
+            recorded = 1
+        except: # If there is excption so there is no input
+            recorded = 0
+
+        return recorded, played
 
 def writehtml():
     html = open(tempdir+"\panorama.html",'w')
