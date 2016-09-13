@@ -1,7 +1,7 @@
-[logo]: https://github.com/AlmCo/Panorama/raw/master/bin/sources/logo.png "Panorama"
+[logo]: https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png "Panorama"
 ![logo]
 
-### What is panorama?
+### What is PANORAMA?
 Panorama was made to generate a width report about Windows systems, support and tested on Windows 2000 and up.
 Provide a fast solution as giving an initial overview to the incident, Currently performing quite basic report:
 
@@ -59,7 +59,7 @@ Screenshots:
 ---------
 Loading screen:
 
-[<img src="https://cloud.githubusercontent.com/assets/15038417/18474359/5d542412-79ca-11e6-9d96-e3203df2f0c0.png" width="200" height="200" />](https://cloud.githubusercontent.com/assets/15038417/18474359/5d542412-79ca-11e6-9d96-e3203df2f0c0.png)
+[<img src="https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png" width="200" height="200" />](https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png)
 
 Web report view:
 
