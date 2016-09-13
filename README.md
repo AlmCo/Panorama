@@ -1,5 +1,4 @@
-[logo]: https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png "Panorama"
-![logo]
+[<img src="https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png" width="380" />](https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png)
 
 ### What is PANORAMA?
 Panorama was made to generate a width report about Windows systems, support and tested on Windows 2000 and up.
@@ -11,17 +10,17 @@ Report structure
   1. Startup commands - The applications that start every startup
   2. Task scheduler - Shdeduler application with date
   3. Prefetch - Parsing all prefetch files to one table (Name, Date, Size, Path, Counter and last run time)
-  4. Process list - The simple "tasklist" with description
+  4. Process list - The simple "tasklist /svn" with description
   5. Installed Softwares - List of all installed softwares
 
 #### Security:
   1. Firewall allowed applications - List of all firewall rules
-  2. McAfee - Version and setting, list of exclusions and intersting logs)
+  2. McAfee - Version and setting, list of exclusions and intersting logs
   3. Microsoft updates and hotfixes
 
 #### Networking:
   1. IP and MAC Address - List of address with dates
-  2. Netstat - The simple "netstat" command
+  2. Netstat - The simple "netstat -no" command
   3. Wireless cards - Connected wireless cards
 
 #### General:
@@ -57,8 +56,6 @@ Developer guide:
 
 Screenshots:
 ---------
-Loading screen:
-
 [<img src="https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png" width="200" height="200" />](https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png)
 
 Web report view:
