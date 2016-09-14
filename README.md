@@ -64,4 +64,4 @@ Web report view:
 
 Text report view:
 
-[<img src="https://cloud.githubusercontent.com/assets/15038417/18474446/af020900-79ca-11e6-810c-a1d3ec959af6.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/18474446/af020900-79ca-11e6-810c-a1d3ec959af6.png)
+[<img src="https://cloud.githubusercontent.com/assets/15038417/18503158/09b963c2-7a64-11e6-8fa9-9ee200e1f013.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/18503158/09b963c2-7a64-11e6-8fa9-9ee200e1f013.png)
