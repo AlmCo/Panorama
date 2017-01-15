@@ -5,7 +5,7 @@ Panorama was made to generate a width report about Windows systems, support and 
 
 Provide a fast solution as giving an initial overview to the incident, Currently performing quite basic report.
 
-Administrator privilege is not required! (Can run by any user)
+The tool doesn't require admin permissions and yet can provide you a professional report on any Windows computer locally or throughout the network (Using without GUI).
 
 New - 'Files Finder' - Map all media files, Currenlty available from GUI only. (doc, docx, ppt, pptx, PDF, gif, png, jpg, jped, wmv, mp4, avi)
 
@@ -52,12 +52,19 @@ Quick USER guide:
   
     2.1 Double-click OR from CMD without arguments - Opens the GUI
     
-    2.2 Run from CMD with argument '-c' - writes the results to TXT file (%temp%/panorama)
+    2.2 Run from CMD - with argument '-c' - writes the results to TXT file (%temp%/panorama):
+    
+    ```Panorama.exe -c```
   
   3. Can run from CMD with argument '-h' to see the tiny help screen.
     
   4. NO admin permissions is required :)
 
+Compile:
+---------
+The original Panorama file compiled by:
+
+```c:\Python27\Scripts\pyinstaller.exe --onefile --window --icon=panorama.ico Panorama.py```
 
 Screenshots:
 ---------
