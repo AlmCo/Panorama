@@ -1,67 +1,72 @@
 [<img src="https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png" width="380" />](https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png)
 
 ### What is PANORAMA?
-Panorama was made to generate a width report about Windows systems, support and tested on Windows 2000 and up.
-Provide a fast solution as giving an initial overview to the incident, Currently performing quite basic report:
+Panorama was made to generate a width report about Windows systems, support and tested on Windows XP SP2 and up.
+
+Provide a fast solution as giving an initial overview to the incident, Currently performing quite basic report.
+
+Administrator privilege is not required! (Can run by any user)
+
+New - 'Files Finder' - Map all media files, Currenlty available from GUI only. (doc, docx, ppt, pptx, PDF, gif, png, jpg, jped, wmv, mp4, avi)
 
 Report structure
 ---------
-#### Software:
-  1. Startup commands - The applications that start every startup
-  2. Task scheduler - Shdeduler application with date
-  3. Prefetch - Parsing all prefetch files to one table (Name, Date, Size, Path, Counter and last run time)
-  4. Process list - The simple "tasklist /svn" with description
-  5. Installed Softwares - List of all installed softwares
+#### System:
+  1. Users - Password, Admin, Last logon, Last password update
+  2. Startup commands - Command, Active
+  3. Task scheduler - Name, Next run, Status
+  4. Installed Softwares - List
+  5. Recently used files - List
+  4. Active processes - Name, ID, Communication
+
 
 #### Security:
-  1. Firewall allowed applications - List of all firewall rules
-  2. McAfee - Version and setting, list of exclusions and intersting logs
-  3. Microsoft updates and hotfixes
+  1. McAfee - Version, Dat Date, Quarantine, Exclusions, Logs
+  2. Firewall - Status, Allowed applications
+  3. Microsoft hotfixes - Date, List of packages
+
 
 #### Networking:
-  1. IP and MAC Address - List of address with dates
-  2. Netstat - The simple "netstat -no" command
-  3. Wireless cards - Connected wireless cards
+  1. Network cards - List
+  2. IP Address - IP, Gateway, DHCP, Date, IPv6
+  3. MAC Address - List
+  4. Net view - List
+  5. Netstat - Local, Target, ID, Process, Status
+  6. ARP Table - IP, MAC, Type
+  7. Hosts file - Domain, Target IP
+  
 
-#### General:
-  1. Users - Sorted by administrator and regular users
-  2. USB Connections - History of all usb connections with dates and serial number
-  3. Speakers and microphone - Durability test
+#### USB:
+  1. USB - Name, Type, Serial number, Date
+  2. USB Deview - Link
+  
 
 Report output options:
 ---------
-  1. HTML - Opens with browser
-  2. Text file - Opens with notepad
+  1. HTML - Web page
+  2. Text file
  
 Quick USER guide:
 ---------
-  1. Clone the Panorama by:
-    ```git clone https://github.com/AlmCo/Panorama.git```
-  2. Run bin/Panorama.exe
-  3. Admin permissions is required only for prefetch.
-  4. **Burn the 'bin' folder contents on read-only CD is recommanded.**
+  1. Run 'Panorama.exe' from bin folder:
+  
+    2.1 Double-click OR from CMD without arguments - Opens the GUI
+    
+    2.2 Run from CMD with argument '-c' - writes the results to TXT file (%temp%/panorama)
+  
+  3. Can run from CMD with argument '-h' to see the tiny help screen.
+    
+  4. NO admin permissions is required :)
 
-Developer guide:
----------
-  * Under the 'src' folder has two files: Panorama.py and setup.py
-  * Can be compiled by: ```python setup.py py2exe```
-  * Reqierd dependencies (can be install by 'pip install'):
-    *  Tkinter
-    *  _winreg
-    *  pyaudio
-    *  wave
-  * Reqierd files and folder:
-    * Copy the folder 'sources' that under 'bin' folder
-    * Copy all of the DLL and manifest files
 
 Screenshots:
 ---------
-[<img src="https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png" width="200" height="200" />](https://cloud.githubusercontent.com/assets/15038417/18474718/2d10cf38-79cc-11e6-921d-3364685b44ee.png)
+[<img src="https://cloud.githubusercontent.com/assets/15038417/21966272/4b64c304-db79-11e6-98e8-1f9504fcc5bc.png" width="200" height="200" />](https://cloud.githubusercontent.com/assets/15038417/21966272/4b64c304-db79-11e6-98e8-1f9504fcc5bc.png)
 
 Web report view:
 
-[<img src="https://cloud.githubusercontent.com/assets/15038417/18474444/ab1abc1a-79ca-11e6-8d1b-cf6c2f7c867e.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/18474444/ab1abc1a-79ca-11e6-8d1b-cf6c2f7c867e.png)
+[<img src="https://cloud.githubusercontent.com/assets/15038417/21966282/669acc54-db79-11e6-9acb-afd86140327a.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/21966282/669acc54-db79-11e6-9acb-afd86140327a.png)
 
 Text report view:
 
-[<img src="https://cloud.githubusercontent.com/assets/15038417/18503158/09b963c2-7a64-11e6-8fa9-9ee200e1f013.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/18503158/09b963c2-7a64-11e6-8fa9-9ee200e1f013.png)
+[<img src="https://cloud.githubusercontent.com/assets/15038417/21966287/6ba000ca-db79-11e6-87bb-a6ca17a639f0.png" width="200" height="110" />](https://cloud.githubusercontent.com/assets/15038417/21966287/6ba000ca-db79-11e6-87bb-a6ca17a639f0.png)
