@@ -1,7 +1,7 @@
 [<img src="https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png" width="380" />](https://cloud.githubusercontent.com/assets/15038417/18474722/2f78cc4e-79cc-11e6-801e-b8efd70ba471.png)
 
 ### What is PANORAMA?
-Panorama was made to generate a width report about Windows systems, support and tested on Windows XP SP2 and up.
+Panorama was made to generate a wide report about Windows systems, support and tested on Windows XP SP2 and up.
 
 Provide a fast solution as giving an initial overview to the incident, Currently performing quite basic report.
 
