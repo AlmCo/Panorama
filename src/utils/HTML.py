@@ -172,7 +172,7 @@ class HTMLReport:
 		self.write(closeTitle)
 
 
-		self.writeTitle("Task Shoulder")
+		self.writeTitle("Task scheduler")
 		if len(self.forensics.Tasks) != 0:
 			table = ("<table><tr><th>Name</th><th>Execute date</th><th>Status</th></tr>")
 			for task in self.forensics.Tasks:
