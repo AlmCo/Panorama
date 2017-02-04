@@ -76,7 +76,7 @@ Offical page: https://github.com/AlmCo/Panorama\n\n
 			self.write("Empty")
 
 
-		self.writeTitle("Task Shoulder")
+		self.writeTitle("Task scheduler")
 		if len(self.forensics.Tasks) != 0:
 			for task in self.forensics.Tasks:
 				self.write(task["TaskName"]+" | NextRun: "+task["Next Run Time"]+" | Status: "+task["Status"])
