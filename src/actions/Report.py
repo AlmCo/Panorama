@@ -124,7 +124,7 @@ class GuiReportBuilding():
 		Ui_Panorama.logView.write("Netstat...")
 		forensic.fNetStat()
 
-		Ui_Panorama.logView.write("Task shoulder...")
+		Ui_Panorama.logView.write("Task scheduler...")
 		forensic.fTasks()
 
 		Ui_Panorama.logView.write("Hosts file...")
